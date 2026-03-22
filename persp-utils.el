@@ -41,6 +41,7 @@
 (require 'persp-utils-sidebar)
 (require 'persp-utils-workspace)
 (require 'persp-utils-terminal)
+(require 'persp-utils-project)
 
 (provide 'persp-utils)
 ;;; persp-utils.el ends here
