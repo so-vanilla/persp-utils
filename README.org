@@ -1,0 +1,27 @@
+#+TITLE: persp-utils
+#+AUTHOR: Shuto Omura
+
+Utility packages for [[https://github.com/nex3/perspective-el][perspective.el]].
+
+* Features
+
+- *Sidebar*: Display and navigate perspectives in a side window
+- *Workspace*: Template-based workspace auto-setup
+- *Terminal*: Per-perspective terminal management
+
+* Installation
+
+** Nix flake
+
+#+begin_src nix
+{
+  inputs.persp-utils = {
+    url = "github:so-vanilla/persp-utils";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+}
+#+end_src
+
+* License
+
+GPL-3.0
