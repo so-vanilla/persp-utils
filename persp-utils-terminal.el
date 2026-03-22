@@ -60,8 +60,9 @@ Otherwise, create a new terminal."
                                  persp-utils-terminal-mode-alist))
          (existing (and target-mode
                         (seq-find (lambda (buf)
-                                    (with-current-buffer buf
-                                      (derived-mode-p target-mode)))
+                                    (and (buffer-live-p buf)
+                                         (with-current-buffer buf
+                                           (derived-mode-p target-mode))))
                                   (persp-current-buffers)))))
     (if existing
         (switch-to-buffer existing)
